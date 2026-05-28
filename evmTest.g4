@@ -4,8 +4,8 @@ program: statements EOF;
 
 statements: statement+;
 
-statement: variable_declaration | assignment | function_declaraion | if_statement | while_statement
-            | for_statement | switch_statement;
+statement: variable_declaration | assignment | function_declaraion | if_statement
+            | while_statement | for_statement | switch_statement;
 
 
 // Variable Declaration
@@ -70,7 +70,7 @@ update : id INC | id DEC | id ADD_ASSIGN expression | id SUB_ASSIGN expression |
 // Switch Statement
 switch_statement: SWITCH '(' expression ')' '{' case_statement+ '}' ;
 
-case_statement: CASE '(' value ')' '{' (statement)* '}';
+case_statement: CASE '(' value ')' '{' (statement | assignment)* '}';
 
 
 

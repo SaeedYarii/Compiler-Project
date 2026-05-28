@@ -1,4 +1,4 @@
-# Generated from C:/Users/Asus/Desktop/Compiler/TA/GIT/evmTest.g4 by ANTLR 4.13.2
+# Generated from C:/Users/Asus/Desktop/Compiler/TA/Compiler-Project/evmTest.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .evmTestParser import evmTestParser

@@ -3,7 +3,7 @@ import argparse
 from gen.evmTestLexer import evmTestLexer
 from gen.evmTestParser import evmTestParser
 from custom_listener import evmTestCustomListener
-
+from required_code_collection.ast_to_networkx_graph import show_ast
 
 def main(arguments):
     # 1. Setup Input Stream
@@ -34,8 +34,10 @@ def main(arguments):
     for name, info in semantic_analyzer.functions.items():
         print(f"{name}: {info}")
 
-
-
+    ast = semantic_analyzer.ast
+    show_ast(ast.root)
+    traversal = ast.traverse_ast(ast.root)
+    print(traversal)
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()

@@ -1,3 +1,0 @@
-int function d(int a) {
-return a;
-}
